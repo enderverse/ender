@@ -1,0 +1,102 @@
+{
+	"name": "ender",
+	"version": "0.0.0",
+	"description": "A modular bot extendable with plugins",
+	"license": "UNLICENSED",
+	"author": {
+		"name": "Tyler Richards",
+		"email": "hello@tjrgg.xyz"
+	},
+	"repository": "Enderverse/Ender",
+	"engines": {
+		"node": "^12.0.0",
+		"npm": "use-yarn",
+		"yarn": "^1.21.1"
+	},
+	"main": "src/index.js",
+	"private": true,
+	"scripts": {
+		"commit": "commit",
+		"lint": "xo 'src/**/*.js'",
+		"lint:fix": "xo 'src/**/*.js' --fix",
+		"start": "node src/index.js",
+		"test": "ava './tests/index.js'",
+		"update": "yarn upgrade"
+	},
+	"dependencies": {
+		"discord.js": "discordjs/discord.js#master",
+		"dotenv": "^8.2.0",
+		"dotenv-parse-variables": "^0.2.3",
+		"express": "^4.17.1",
+		"express-session": "^1.17.0",
+		"fs-nextra": "^0.4.5",
+		"helmet": "^3.21.2",
+		"klasa": "dirigeants/klasa#settings",
+		"klasa-member-gateway": "dirigeants/klasa-member-gateway#settings",
+		"p-wait-for": "^3.1.0",
+		"passport": "^0.4.1"
+	},
+	"devDependencies": {
+		"@commitlint/prompt-cli": "^8.3.5",
+		"ava": "^2.4.0",
+		"commitlint": "^8.3.5",
+		"commitlint-config-tjr": "tjrgg/commitlint-config-tjr",
+		"eslint": "^6.3.0",
+		"eslint-config-tjr": "^1.0.2",
+		"husky": "^4.2.1",
+		"mocha": "^6.2.0",
+		"sinon": "^7.4.2",
+		"xo": "^0.25.3"
+	},
+	"commitlint": {
+		"extends": "tjr"
+	},
+	"eslintConfig": {
+		"extends": "tjr"
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"xo": {
+		"extends": "tjr",
+		"overrides": [
+			{
+				"files": [
+					"src/commands/**/*.js"
+				],
+				"rules": {
+					"no-throw-literal": "off"
+				}
+			},
+			{
+				"files": [
+					"src/languages/**/*.js"
+				],
+				"rules": {
+					"unicorn/filename-case": "off"
+				}
+			},
+			{
+				"files": [
+					"src/providers/**/*.js"
+				],
+				"rules": {
+					"promise/prefer-await-to-then": "off",
+					"unicorn/explicit-length-check": "off"
+				}
+			},
+			{
+				"files": [
+					"tests/**/*.js"
+				],
+				"rules": {
+					"func-names": "off",
+					"prefer-arrow-callback": "off"
+				}
+			}
+		],
+		"space": false
+	}
+}
