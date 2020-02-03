@@ -10,20 +10,16 @@
 ![Contributors](https://img.shields.io/github/contributors-anon/Enderverse/Ender?cacheSeconds=86400)
 ![Issues](https://img.shields.io/github/issues/Enderverse/Ender?cacheSeconds=86400)
 ![Pull Requests](https://img.shields.io/github/issues-pr/Enderverse/Ender?cacheSeconds=86400)
+![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/Enderverse/Ender?cacheSeconds=86400)
 <!-- ![Release](https://img.shields.io/github/v/release/Enderverse/Ender?cacheSeconds=86400) -->
+<!-- ![Size](https://img.shields.io/github/repo-size/Enderverse/Ender?cacheSeconds=86400&label=size) -->
 
 <!-- ![Ender Version](https://img.shields.io/github/package-json/version/Enderverse/Ender?cacheSeconds=86400&label=version) -->
 
-![Dependencies](https://img.shields.io/librariesio/github/Enderverse/Ender?cacheSeconds=86400)
-![Dependency: discord.js](https://img.shields.io/github/package-json/dependency-version/Enderverse/Ender/discord.js?cacheSeconds=86400&label=discord.js)
-![Dependency: klasa](https://img.shields.io/github/package-json/dependency-version/Enderverse/Ender/klasa?cacheSeconds=86400&label=klasa)
-
-![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/Enderverse/Ender?cacheSeconds=86400)
 
 [![Discord](https://img.shields.io/discord/110118478119174144?style=social)](https://discordapp.com/invite/2JY79nd)
 [![Twitter](https://img.shields.io/twitter/follow/tjrgg?style=social)](https://twitter.com/tjrgg)
 
-<!-- ![Size](https://img.shields.io/github/repo-size/Enderverse/Ender?cacheSeconds=86400&label=size) -->
 
 
 
