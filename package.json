@@ -17,8 +17,8 @@
 	"private": true,
 	"scripts": {
 		"commit": "commit",
-		"lint": "xo 'src/**/*.js'",
-		"lint:fix": "xo 'src/**/*.js' --fix",
+		"lint": "xo",
+		"lint:fix": "xo --fix",
 		"start": "node src/index.js",
 		"test": "ava 'tests/index.js'",
 		"update": "yarn upgrade"
