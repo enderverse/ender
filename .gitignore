@@ -2,6 +2,7 @@
 *.log
 
 data
+logs
 node_modules
 plugins
 .vscode
