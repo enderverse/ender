@@ -2,7 +2,7 @@
 	"name": "ender",
 	"version": "0.0.0",
 	"description": "A modular bot extendable with plugins",
-	"license": "UNLICENSED",
+	"license": "SEE LICENSE IN LICENSE.md",
 	"author": {
 		"name": "Tyler Richards",
 		"email": "hello@tjrgg.xyz"

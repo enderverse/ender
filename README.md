@@ -67,3 +67,5 @@
 ## License
 
 Copyright © 2020 TJR Enterprise, LLC, Tyler Richards and contributors. All rights reserved.
+
+Use of the software and source code contained in this project is subject to the [Software License Agreement](LICENSE.md) (the "License") included with this project. The License is intended to allow you to access, download, modify and use the software and source code in this project for your personal benefit and to allow you to contribute to the project. The License is not intended to permit any other use of the software and source code in this project, including without limitation, commercial and proprietary uses.
