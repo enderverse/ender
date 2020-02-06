@@ -61,15 +61,15 @@ Upon any termination of the License, any and all licenses and rights granted to 
 
 We reserve the right to add, change, modify or remove features and functionality from the Software at any time and in any way, with or without notice to you.
 
-WE PROVIDE THE SOFTWARE ON AN "AS AVAILABLE", "AS IS" AND "WITH ALL FAULTS" BASIS AND WITHOUT ANY PROMISES, REPRESENTATIONS OR WARRANTIES OF ANY KIND WHATSOEVER. YOU USE THE SOFTWARE AT YOUR OWN RISK.
+WE PROVIDE THE PROJECT ON AN "AS AVAILABLE", "AS IS" AND "WITH ALL FAULTS" BASIS AND WITHOUT ANY PROMISES, REPRESENTATIONS OR WARRANTIES OF ANY KIND WHATSOEVER. YOU USE THE SOFTWARE AT YOUR OWN RISK.
 
 To the fullest extent permitted by law, we expressly disclaim any and all warranties of any kind, whether express, implied or statutory, including, but not limited to, warranties of accuracy, availability, fitness for a particular purpose, functionality, merchantability, non-infringement, performance, quality, reliability, title, usefulness and any other warranty that might arise under any law. Without limiting the foregoing, we make no promises, representations or warranties:
-- Concerning sites and resources outside of the Software, even if linked to from or within the Software;
+- Concerning resources outside of the Project, even if linked to from or within the Project;
 - Concerning your use of the Software;
-- That the Software is or will be compliant with all applicable laws and regulations in your jurisdiction or that the Software is or will be available or permitted in your jurisdiction;
-- That the Software is or will be accessible;
-- That the Software is or will be error-free;
-- That the Software will meet your business or professional needs; and
+- That the Project is or will be compliant with all applicable laws and regulations in your jurisdiction or that the Software is or will be available or permitted in your jurisdiction;
+- That the Project is or will be accessible;
+- That the Project is or will be error-free;
+- That the Project will meet your business or professional needs; and
 - That we will continue to maintain and support the Software or any part of the Software.
 
 To the extent any of the foregoing disclaimers or limitations of liability do not apply to you, all applicable implied and statutory warranties shall be limited to the fullest extent permitted by law for the minimum period required by law and no warranties shall apply after such period.
@@ -87,7 +87,7 @@ To the fullest extent permitted by law:
 ## Indemnification
 
 You shall defend, indemnify and hold harmless the Company, its affiliates and subsidiaries, and their respective agents, contractors, directors, employees, officers and representatives, from and against any and all actions, claims, costs, damages, debts, expenses, fees (including, but not limited to, attorneys’ fees), fines, judgments, liabilities, losses, obligations and penalties arising out of or in relation to any action, claim, counterclaim, proceeding or suit arising out of or in relation to:
-- Your access to, activities on and usage of the Software;
+- Your access to and usage of the Project;
 - Your breach of this Agreement;
 - Your breach of any agreement or contract with any third party;
 - Your violation of any third party rights, including, but not limited to, any intellectual property, privacy or publicity rights; or
@@ -97,7 +97,7 @@ You shall defend, indemnify and hold harmless the Company, its affiliates and su
 
 ## Term and Termination
 
-This Agreement begins on the date of electronic acceptance or on the date you first access or use the Project and continues so long as you access or use the Project in any way. You may only terminate this Agreement by no longer accessing or using the Project in any way. We may terminate this Agreement at any time by providing seven (7) days notice.
+This Agreement begins on the date of electronic acceptance or on the date you first access or use the Project and continues so long as you access or use the Project in any way. You may only terminate this Agreement by no longer accessing or using the Project in any way. We may terminate this Agreement at any time.
 
 If you breach this Agreement, we may, in our sole discretion, terminate this Agreement immediately, with or without advance notice to you. If we disable, suspend or terminate your access to the Project, you may not attempt to access, download or use the Project without our written consent and permission to do so.
 
