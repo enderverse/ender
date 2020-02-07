@@ -53,7 +53,7 @@ All interest, rights and title in and to the Project and its components are and 
 
 Subject to the terms of the License, we grant you a limited, non-assignable, non-exclusive, non-sublicensable, non-transferable, personal, revocable and worldwide license to access, download and use the Project as provided by the Company for the sole purpose of enabling you to enjoy the benefit of the Project in a manner permitted by the License, and to modify and prepare derivative works of the Project for the sole purpose of submitting additions or modifications to the Project for inclusion in the Project. Unless you have our express written permission, you shall not assign, distribute, lease, redistribute, rent, sell, sublicense, transfer or otherwise exploit or make the Project available to any third party.
 
-Upon any termination of the License, any and all licenses and rights granted to you in this section shall be immediately revoked and terminated, and you shall have no further right to access or use the Project in any way. Within three (3) days after termination of the License, you shall cease and desist all use of the Project and any part thereof, and you shall destory or return all full or partial copies of the Project in your possession or under your control.
+Upon any termination of the License, any and all licenses and rights granted to you in this section shall be immediately revoked and terminated, and you shall have no further right to access or use the Project in any way. Within three (3) days after termination of the License, you shall cease and desist all use of the Project and any part thereof, and you shall destroy or return all full or partial copies of the Project in your possession or under your control.
 
 
 
@@ -153,5 +153,3 @@ No failure or delay by the Company in exercising any right shall waive any furth
 ## Entire Agreement
 
 This Agreement constitutes the entire agreement and understanding between the Company and you concerning the subject matter hereof and supersedes all prior agreements, communications, proposals, representations and understandings regarding the same, whether oral or written.
-
-
