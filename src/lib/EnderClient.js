@@ -69,6 +69,7 @@ class EnderClient extends Client {
 		for (const plugin of plugins) {
 			this.plugins[plugin.info.name] = plugin.info;
 			plugin.mod.call(this);
+			this.console.log(`[PLUGINS] => ${plugin.info.name} loaded.`);
 		}
 	}
 
