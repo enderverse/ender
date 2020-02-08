@@ -1,0 +1,26 @@
+{
+	"apps": [
+		{
+			"name": "Ender",
+			"script": "src/index.js",
+			"args": "",
+			"autorestart": true,
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"env_production": {
+				"NODE_ENV": "production"
+			},
+			"exec_mode": "fork",
+			"instances": 1,
+			"max_memory_restart": "1G",
+			"max_restarts": 3,
+			"min_uptime": "3m",
+			"restart_delay": 2000,
+			"watch": false,
+			"combine_logs": true,
+			"error_file": "logs/error.log",
+			"out_file": "logs/out.log"
+		}
+	]
+}
