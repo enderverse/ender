@@ -1,4 +1,7 @@
 module.exports = {
+	package: require('../package.json'),
+	version: require('../package.json').version,
+
 	// lib
 	Ender: require('./lib/EnderClient'),
 	EnderClient: require('./lib/EnderClient'),
@@ -34,9 +37,8 @@ module.exports = {
 	Util: require('./lib/util/Util'),
 	util: require('./lib/util/Util'),
 
-	package: require('../package.json'),
-	plugins: require('../plugins.json'),
-	version: require('../package.json').version
+	// eslint-disable-next-line unicorn/import-index
+	plugins: require('../plugins/index.js')
 };
 
 // eslint-disable-next-line import/no-unassigned-import

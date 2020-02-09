@@ -1,3 +1,4 @@
+const pluginList = require('../plugins.json');
 const { Conf, Ender, plugins } = require('..');
 const { PermissionLevels } = require('klasa');
 
@@ -69,13 +70,13 @@ const app = {
 };
 
 (async () => {
-	const pl = await gatherPlugins();
+	const pl = await plugins();
 
 	for (const plugin of pl) {
 		if (!plugin.name) continue;
 		if (!plugin.description || !plugin.version) continue;
 
-		if (!plugins[plugin.name]) continue;
+		if (!pluginList[plugin.name]) continue;
 		Ender.use(require(plugin.dir), plugin);
 	}
 
@@ -84,26 +85,3 @@ const app = {
 	App.init();
 	App.start({ token: conf.get('DISCORD_TOKEN') });
 })();
-
-
-
-async function gatherPlugins() {
-	const plugins = [];
-
-	const { join, parse } = require('path');
-	const { readJSON, scan } = require('fs-nextra');
-
-	const plInfo = await scan(join(__dirname, '..', 'plugins'), { depthLimit: 2, filter: (stats, dir) => {
-		const file = parse(dir);
-		return stats.isFile() && file.base === 'plugin.json' && file.ext === '.json' && file.name === 'plugin';
-	} });
-	const pl = plInfo.keys();
-
-	for (const p of pl) {
-		// eslint-disable-next-line no-await-in-loop
-		plugins.push({ ...await readJSON(p), dir: parse(p).dir });
-	}
-
-	return plugins;
-}
-

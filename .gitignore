@@ -1,8 +1,10 @@
 *.env
 *.log
 
-data
-logs
-node_modules
-plugins
-.vscode
+data/*
+logs/*
+node_modules/*
+plugins/*
+.vscode/*
+
+!plugins/index.js
