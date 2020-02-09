@@ -5,7 +5,7 @@
 </h1>
 
 <h3 align="center">
-	Ender is a modular Discord bot that is extendable with plugins.
+	Ender is a highly configurable modular Discord bot that is extendable with plugins.
 </h3>
 
 <p align="center">
@@ -63,6 +63,12 @@
 * GitHub: [@tjrgg](https://github.com/tjrgg)
 * Twitter: [@tjrgg](https://twitter.com/tjrgg)
 
+## Notice
+Ender is not designed to run independently on your local machine and I will not provide support for "self-hosting". The project is designed to be exclusively for Ender, but open for developers and users to be able to contribute and open issues.
+
+## Contributions & Issues
+
+<!-- TO-DO -->
 
 ## License
 
