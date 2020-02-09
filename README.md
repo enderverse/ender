@@ -63,8 +63,9 @@
 * GitHub: [@tjrgg](https://github.com/tjrgg)
 * Twitter: [@tjrgg](https://twitter.com/tjrgg)
 
-## Notice
+## Support
 Ender is not designed to run independently on your local machine and I will not provide support for "self-hosting". The project is designed to be exclusively for Ender, but open for developers and users to be able to contribute and open issues.
+Support will be provided via GitHub issues if relevant to the publicly hosted bot, not self-hosting.
 
 ## Contributions & Issues
 
@@ -75,3 +76,4 @@ Ender is not designed to run independently on your local machine and I will not 
 Copyright © 2020 TJR Enterprise, LLC, Tyler Richards and contributors. All rights reserved.
 
 Use of the software and source code contained in this project is subject to the [Software License Agreement](LICENSE.md) (the "License") included with this project. The License is intended to allow you to access, download, modify and use the software and source code in this project for your personal benefit and to allow you to contribute to the project. The License is not intended to permit any other use of the software and source code in this project, including without limitation, commercial and proprietary uses.
+Also see [NOTICE.md](NOTICE.md).
