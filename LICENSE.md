@@ -3,7 +3,7 @@ Software License Agreement
 
 
 
-**TJR Enterprise, LLC** (the "Company," "we" or "our") provides its software (the "Software"), and the source code of the Software, the documentation source and any configuration files (the "Source"), subject to this Software License Agreement (the "Agreement" or "License").
+**TJR Enterprise, LLC** (the "Company", "we" or "our") provides its software (the "Software"), and the source code of the Software, the documentation source and any configuration files (the "Source"), subject to this Software License Agreement (the "Agreement" or "License").
 
 This Agreement governs your access to and use of (a) the Software, (b) the Source, (c) the documentation, manuals and related materials pertaining to the Software and the Source (the "Software Documentation"), and (d) the applications, data, images, information, links, sounds, text, videos and other content or materials furnished by the Company or included with the Software in connection with the Software and the Source (collectively, with the Software, the Software Documentation and the Source, the "Project").
 
