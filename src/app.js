@@ -1,6 +1,13 @@
+const { resolve } = require('path');
+
 const pluginList = require('../plugins.json');
 const { Conf, Ender, plugins } = require('..');
+
+const { readJSON } = require('fs-nextra');
 const { PermissionLevels } = require('klasa');
+
+const execa = require('execa');
+const packageJSON = require('package-json');
 
 const conf = new Conf();
 
@@ -70,11 +77,57 @@ const app = {
 };
 
 (async () => {
+	const pkg = await readJSON(resolve(__dirname, '..', 'package.json'));
+	const pkgDeps = Object.keys(pkg.dependencies);
+
 	const pl = await plugins();
 
 	for (const plugin of pl) {
 		if (!plugin.name) continue;
 		if (!plugin.description || !plugin.version) continue;
+
+		if (plugin.dependencies) {
+			plugin.deps = [];
+
+			const pluginDeps = Object.keys(plugin.dependencies);
+			for (const dep of pluginDeps) {
+				/* eslint-disable no-await-in-loop */
+
+				// If the dependency is already in package.json, we don't need to add it again
+				if (pkgDeps.includes(dep)) continue;
+
+				// If not, check the dependency to ensure it's valid
+				await packageJSON(dep, { version: plugin.dependencies[dep] }).catch((error) => {
+					if (error.name === 'PackageNotFoundError') {
+						throw new Error(`'${dep}' is not a recognized package.`);
+					}
+
+					if (error.name === 'VersionNotFoundError') {
+						throw new Error(`Unable to find a version of '${dep}' matching '${plugin.dependencies[dep]}'`);
+					}
+
+					throw new Error(`An unknown error occured. ${error}`);
+				});
+
+				// If the dependency is a valid package, it needs to be added in order for the plugin to work properly
+				await execa.command(`yarn add ${dep}@${pluginDeps[dep]} --quiet`).catch((error) => {
+					throw new Error(`An error occured when trying to install '${dep}': ${error}`);
+				});
+
+				try {
+					const d = require(`${dep}`);
+				}
+				catch (error) {
+					if (error.code === 'MODULE_NOT_FOUND') {
+						throw new Error(`Something went wrong when trying to install and use '${dep}'.`);
+					}
+
+					throw error;
+				}
+
+				/* eslint-enable no-await-in-loop */
+			}
+		}
 
 		if (!pluginList[plugin.name]) continue;
 		Ender.use(require(plugin.dir), plugin);
