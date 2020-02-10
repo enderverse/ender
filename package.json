@@ -67,27 +67,10 @@
 		"overrides": [
 			{
 				"files": [
-					"src/commands/**/*.js"
-				],
-				"rules": {
-					"no-throw-literal": "off"
-				}
-			},
-			{
-				"files": [
 					"src/languages/**/*.js"
 				],
 				"rules": {
 					"unicorn/filename-case": "off"
-				}
-			},
-			{
-				"files": [
-					"src/providers/**/*.js"
-				],
-				"rules": {
-					"promise/prefer-await-to-then": "off",
-					"unicorn/explicit-length-check": "off"
 				}
 			},
 			{
