@@ -106,12 +106,12 @@ const app = {
 						throw new Error(`Unable to find a version of '${dep}' matching '${plugin.dependencies[dep]}'`);
 					}
 
-					throw new Error(`An unknown error occured. ${error}`);
+					throw new Error(`An unknown error occurred. ${error}`);
 				});
 
 				// If the dependency is a valid package, it needs to be added in order for the plugin to work properly
 				await execa.command(`yarn add ${dep}@${pluginDeps[dep]} --quiet`).catch((error) => {
-					throw new Error(`An error occured when trying to install '${dep}': ${error}`);
+					throw new Error(`An error occurred when trying to install '${dep}': ${error}`);
 				});
 
 				try {
