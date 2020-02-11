@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 
 const pluginList = require('../plugins.json');
-const { Conf, Ender, plugins } = require('..');
+const { Conf, Ender, Ender: { util: { req } }, plugins } = require('..');
 
 const { readJSON } = require('fs-nextra');
 const { PermissionLevels } = require('klasa');
@@ -94,9 +94,13 @@ const app = {
 				/* eslint-disable no-await-in-loop */
 
 				// If the dependency is already in package.json, we don't need to add it again
-				if (pkgDeps.includes(dep)) continue;
+				if (pkgDeps.includes(dep)) {
+					const d = req(dep);
+					// eslint-disable-next-line max-depth
+					if (d) continue;
+				}
 
-				// If not, check the dependency to ensure it's valid
+				// Check to ensure dependency is a valid package that can be required
 				await packageJSON(dep, { version: plugin.dependencies[dep] }).catch((error) => {
 					if (error.name === 'PackageNotFoundError') {
 						throw new Error(`'${dep}' is not a recognized package.`);
@@ -114,16 +118,8 @@ const app = {
 					throw new Error(`An error occurred when trying to install '${dep}': ${error}`);
 				});
 
-				try {
-					const d = require(`${dep}`);
-				}
-				catch (error) {
-					if (error.code === 'MODULE_NOT_FOUND') {
-						throw new Error(`Something went wrong when trying to install and use '${dep}'.`);
-					}
-
-					throw error;
-				}
+				// Try to require the dependency
+				req(dep);
 
 				/* eslint-enable no-await-in-loop */
 			}
