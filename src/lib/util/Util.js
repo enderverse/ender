@@ -6,18 +6,18 @@ class Util {
 		throw new Error('This class may not be initiated with new');
 	}
 
-	static req(mod) {
+	static req(mod, install = true) {
 		try {
 			require.resolve(mod);
 		}
 		catch (error) {
-			if (error.code === 'MODULE_NOT_FOUND') {
+			if (install && error.code === 'MODULE_NOT_FOUND') {
 				// eslint-disable-next-line no-unused-vars
-				execa(`yarn add ${mod}`).catch((error) => {
-					throw new Error(`Something went wrong when trying to resolve '${mod}'.`);
+				execa.command(`yarn add ${mod} --silent`, { cwd: process.cwd() }).catch((error) => {
+					throw new Error(`Something went wrong when trying to install '${mod}'.`);
 				});
 			}
-			else { throw new Error(`Something went wrong when trying to resolve '${mod}'.`); }
+			else { throw new Error(`Couldn't resolve '${mod}'.`); }
 
 			setImmediate(() => {});
 		}
