@@ -24,7 +24,7 @@
 		"update": "yarn upgrade"
 	},
 	"dependencies": {
-		"discord.js": "discordjs/discord.js#master",
+		"discord.js": "discordjs/discord.js#fe7df70",
 		"dotenv": "^8.2.0",
 		"dotenv-parse-variables": "^0.2.3",
 		"execa": "^4.0.0",
