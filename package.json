@@ -20,7 +20,7 @@
 		"lint": "xo",
 		"lint:fix": "xo --fix",
 		"start": "node src/index.js",
-		"test": "ava 'tests/index.js'",
+		"test": "ava tests/index.js",
 		"update": "yarn upgrade"
 	},
 	"dependencies": {
