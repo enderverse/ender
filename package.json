@@ -46,6 +46,7 @@
 		"eslint": "^6.3.0",
 		"eslint-config-enderverse": "Enderverse/eslint-config-enderverse",
 		"husky": "^4.2.3",
+		"lint-staged": "^10.0.7",
 		"mocha": "^7.0.1",
 		"sinon": "^8.1.1",
 		"xo": "^0.26.1"
@@ -62,8 +63,14 @@
 	},
 	"husky": {
 		"hooks": {
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+			"pre-commit": "lint-staged"
 		}
+	},
+	"lint-staged": {
+		"src/**/*.js": [
+			"yarn run lint:fix"
+		]
 	},
 	"xo": {
 		"extends": [
