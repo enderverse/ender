@@ -15,7 +15,7 @@ const env = dotenvParse(dotenv.config({ path: resolve(process.cwd(), '.env') }).
 
 (async () => {
 	// CONFIG
-	console.log('[APP] => Loading config..');
+	console.log('[APP] => Loading config...');
 	const app = config(env);
 
 	// PLUGINS
