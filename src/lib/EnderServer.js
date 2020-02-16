@@ -80,19 +80,19 @@ class EnderServer {
 	 * @param {integer} port The port to use for the Server
 	 */
 	listen(port) {
-		this.http = this.server.listen(port, () => this.client.console.log(`Server started on port ${port}.`));
+		this.http = this.server.listen(port, () => this.client.console.log(`[SERVER] => Server started on port ${port}.`));
 		this.port = port;
 
 		this.http.on('error', (e) => {
 			if (e.code === 'EADDRINUSE') {
-				this.client.emit('error', '[SERVER] Address already in use. Retrying...');
+				this.client.emit('error', '[SERVER] => Address already in use. Retrying...');
 				setTimeout(() => {
 					this.http.close(() => {
-						this.http = this.server.listen(port, () => this.client.console.log(`Server started on port ${port}.`));
+						this.http = this.server.listen(port, () => this.client.console.log(`[SERVER] => Server started on port ${port}.`));
 						this.http.on('error', (e) => {
 							if (e.code === 'EADDRINUSE') {
 								this.http.close();
-								this.client.emit('error', '[SERVER] Failed to start server. Address is already in use.');
+								this.client.emit('error', '[SERVER] => Failed to start server. Address is already in use.');
 							}
 						});
 					});
