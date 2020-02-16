@@ -158,6 +158,7 @@ const app = {
 				}
 			}
 
+			// eslint-disable-next-line security/detect-non-literal-require
 			Ender.use(require(plugin.dir), plugin);
 		}
 		/* eslint-enable max-depth */

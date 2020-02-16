@@ -13,6 +13,7 @@ class Conf extends Map {
 
 		// eslint-disable-next-line guard-for-in
 		for (const key in env) {
+			// eslint-disable-next-line security/detect-object-injection
 			this.set(key, env[key]);
 		}
 

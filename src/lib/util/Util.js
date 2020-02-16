@@ -23,6 +23,7 @@ class Util {
 		}
 
 		try {
+			// eslint-disable-next-line security/detect-non-literal-require
 			return require(mod);
 		}
 		// eslint-disable-next-line no-unused-vars
