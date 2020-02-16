@@ -11,8 +11,7 @@ const dotenvParse = require('dotenv-parse-variables');
 const execa = require('execa');
 const packageJSON = require('package-json');
 
-let env = dotenv.config({ path: resolve(process.cwd(), '.env') }).parsed;
-env = dotenvParse(env);
+const env = dotenvParse(dotenv.config({ path: resolve(process.cwd(), '.env') }).parsed);
 
 (async () => {
 	// CONFIG
