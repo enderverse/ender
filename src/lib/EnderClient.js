@@ -6,8 +6,9 @@ const MiddlewareStore = require('../lib/structures/stores/MiddlewareStore');
 const RouteStore = require('../lib/structures/stores/RouteStore');
 const { DEFAULTS } = require('../lib/util/Constants');
 
-const Ender = require('..');
+const { resolve } = require('path');
 
+const { readJSON } = require('fs-nextra');
 const { util: { isFunction, isObject, mergeDefault } } = require('klasa');
 const pWaitFor = require('p-wait-for');
 
@@ -34,12 +35,6 @@ class EnderClient extends Client {
 		super(opts);
 
 		this.Ender = {};
-
-		/**
-		 * The package information for Ender
-		 * @type {Object}
-		 */
-		this.package = Ender.package;
 
 		/**
 		 * The plugin information for Ender
@@ -79,7 +74,19 @@ class EnderClient extends Client {
 	 * @returns {Promise}
 	 */
 	async init() {
-		this.console.log('Ender initializing...');
+		/**
+		 * The package information
+		 * @type {Object}
+		 */
+		this.package = await readJSON(resolve(process.cwd(), 'package.json'));
+
+		/**
+		 * The package version
+		 * @type {Object}
+		 */
+		this.version = this.package.version;
+
+		this.console.log('[CLIENT] => Ender initializing...');
 
 		// Create server instance
 		this.server = new EnderServer(this);
