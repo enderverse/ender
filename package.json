@@ -44,11 +44,11 @@
 		"commitlint": "^8.3.5",
 		"commitlint-config-tjr": "tjrgg/commitlint-config-tjr",
 		"eslint": "^6.3.0",
-		"eslint-config-tjr": "^1.0.2",
-		"husky": "^4.2.1",
-		"mocha": "^6.2.0",
-		"sinon": "^7.4.2",
-		"xo": "^0.25.3"
+		"eslint-config-enderverse": "Enderverse/eslint-config-enderverse",
+		"husky": "^4.2.3",
+		"mocha": "^7.0.1",
+		"sinon": "^8.1.1",
+		"xo": "^0.26.0"
 	},
 	"commitlint": {
 		"extends": [
@@ -56,7 +56,9 @@
 		]
 	},
 	"eslintConfig": {
-		"extends": "tjr"
+		"extends": [
+			"enderverse"
+		]
 	},
 	"husky": {
 		"hooks": {
@@ -64,7 +66,9 @@
 		}
 	},
 	"xo": {
-		"extends": "tjr",
+		"extends": [
+			"enderverse"
+		],
 		"overrides": [
 			{
 				"files": [
