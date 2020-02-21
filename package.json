@@ -17,8 +17,14 @@
 	"private": true,
 	"scripts": {
 		"commit": "commit",
-		"lint": "xo",
-		"lint:fix": "xo --fix",
+		"lint": "yarn run lint:all",
+		"lint:all": "yarn run lint:core && yarn run lint:plugins",
+		"lint:all:fix": "yarn run lint:core:fix && yarn run lint:plugins:fix",
+		"lint:core": "xo",
+		"lint:core:fix": "xo --fix",
+		"lint:plugins": "cd plugins && xo",
+		"lint:plugins:fix": "cd plugins && xo --fix",
+		"postversion": "git push --tags",
 		"start": "node src/index.js",
 		"test": "ava tests/index.js",
 		"update": "yarn upgrade"
