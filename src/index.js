@@ -11,10 +11,6 @@ module.exports = {
 	// lib/client
 	Client: require('./lib/client/Client'),
 
-	// lib/conf
-	Conf: require('./lib/conf/Conf'),
-	Config: require('./lib/conf/Conf'),
-
 	// lib/errors
 	EnderError: require('./lib/errors/Error'),
 	Error: require('./lib/errors/Error'),
