@@ -1,10 +1,17 @@
 *.env
 *.log
 
+config.json
+test.js
+
+.*/
+.idea/*
+.vscode/*
 data/*
+dist/*
 logs/*
 node_modules/*
+out/*
 plugins/*
-.vscode/*
 
 !plugins/index.js
