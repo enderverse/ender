@@ -16,7 +16,6 @@
 	"main": "src/index.js",
 	"private": true,
 	"scripts": {
-		"build": "ncc build src/index.js",
 		"commit": "commit",
 		"lint": "yarn run lint:all",
 		"lint:all": "yarn run lint:core && yarn run lint:plugins",
