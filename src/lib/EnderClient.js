@@ -97,7 +97,7 @@ class EnderClient extends Client {
 
 		this.initialized = true;
 
-		return this.initialized;
+		return this;
 	}
 
 	/**
@@ -130,10 +130,14 @@ class EnderClient extends Client {
 	async start({ token } = {}) {
 		if (!token) throw new Error('No token specified');
 
+		if (!this.initialized) await this.init();
+
 		this.Ender = {
 			client: await this.login(token),
 			server: this.server.listen(this.options.server.port)
 		};
+
+		return this;
 	}
 
 	/**
