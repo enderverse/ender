@@ -97,6 +97,8 @@ class Client extends KlasaClient {
 		 * Log that everything has initialized in this client
 		 */
 		this.emit('log', `Client fully initialized in ${timer.stop()}.`);
+
+		return this;
 	}
 
 	/**
