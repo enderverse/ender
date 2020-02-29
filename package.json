@@ -1,12 +1,13 @@
 {
 	"name": "ender",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "A modular bot extendable with plugins",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"author": {
 		"name": "Tyler Richards",
 		"email": "hello@tjrgg.xyz"
 	},
+	"funding": "https://github.com/Enderverse/Ender?sponsor=1",
 	"repository": "Enderverse/Ender",
 	"engines": {
 		"node": ">=12.0.0",
@@ -37,6 +38,7 @@
 		"express": "^4.17.1",
 		"express-session": "^1.17.0",
 		"fs-nextra": "^0.4.5",
+		"hasha": "^5.2.0",
 		"helmet": "^3.21.2",
 		"klasa": "dirigeants/klasa#settings",
 		"klasa-member-gateway": "dirigeants/klasa-member-gateway#settings",
