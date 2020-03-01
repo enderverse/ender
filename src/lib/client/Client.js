@@ -37,10 +37,9 @@ class Client extends KlasaClient {
 			users: new Schema()
 		};
 
-		/**
-		 * Clears core directories sets from Klasa
-		 */
-		for (const store of this.pieceStores.values()) store.coreDirectories.clear();
+		for (const store of this.pieceStores.values()) {
+			if (store.name !== 'arguments' && store.name !== 'serializers') store.coreDirectories.clear();
+		}
 	}
 
 	/**
