@@ -1,4 +1,4 @@
-const { Ender, plugins: scan } = require('..');
+const { Ender, plugins: scanPlugins } = require('..');
 const config = require('./config');
 const plugins = require('./plugins');
 
@@ -23,7 +23,7 @@ db.defaults({ plugins: [] }).write();
 	const pkgDeps = Object.keys(pkg.dependencies);
 
 	// PLUGINS
-	await plugins(db, pkgDeps, await scan());
+	await plugins(db, pkgDeps, await scanPlugins());
 
 	await new Ender(config(env)).start({ token: env.DISCORD_TOKEN });
 })();

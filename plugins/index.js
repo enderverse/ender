@@ -1,20 +1,21 @@
-const { parse } = require('path');
+const { resolve } = require('path');
 
 const { readJSON, scan } = require('fs-nextra');
 
-const plugins = [];
-
 module.exports = async () => {
-	const plInfo = await scan(__dirname, { depthLimit: 2, filter: (stats, dir) => {
-		const file = parse(dir);
-		return stats.isFile() && file.base === 'plugin.json' && file.ext === '.json' && file.name === 'plugin';
-	} });
-	const pl = plInfo.keys();
+	const pluginDirs = await scan(__dirname, { depthLimit: 1, filter: (stats) => stats.isDirectory() });
+	const pluginsArray = [ ...pluginDirs.keys() ].slice(1);
 
-	for (const p of pl) {
-		// eslint-disable-next-line no-await-in-loop
-		plugins.push({ ...await readJSON(p), dir: parse(p).dir });
-	}
+	const plugins = Promise.all(pluginsArray.map(async (plugin) => {
+		try {
+			const plug = resolve(plugin, 'plugin.json');
+			return { ...await readJSON(plug), dir: plugin };
+		}
+		catch (error) {
+			if (error.code === 'ENOENT') console.log(`[PLUGINS] => The plugin at ${plugin} does not have a plugin.json file.`);
+			return {};
+		}
+	}));
 
 	return plugins;
 };
