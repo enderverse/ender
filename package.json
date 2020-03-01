@@ -78,7 +78,7 @@
 	},
 	"lint-staged": {
 		"src/**/*.js": [
-			"yarn run lint:core:fix"
+			"xo --fix"
 		]
 	},
 	"xo": {
