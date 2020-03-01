@@ -21,14 +21,12 @@
 </p>
 
 <p align="center">
-	<img alt="Commits" src="https://img.shields.io/github/commit-activity/w/Enderverse/Ender?cacheSeconds=86400&label=commits" />
+	<img alt="Commits" src="https://img.shields.io/github/commit-activity/m/Enderverse/Ender?cacheSeconds=86400&label=commits" />
 	<img alt="Contributors" src="https://img.shields.io/github/contributors-anon/Enderverse/Ender?cacheSeconds=86400" />
 	<img alt="Issues" src="https://img.shields.io/github/issues/Enderverse/Ender?cacheSeconds=86400" />
 	<img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/Enderverse/Ender?cacheSeconds=86400" />
-	<!-- <img alt="Release" src="https://img.shields.io/github/v/release/Enderverse/Ender?cacheSeconds=86400" /> -->
 	<img alt="Size" src="https://img.shields.io/github/repo-size/Enderverse/Ender?cacheSeconds=86400&label=size" />
 	<img alt="Version" src="https://img.shields.io/github/package-json/version/Enderverse/Ender?cacheSeconds=86400&label=version" />
-
 </p>
 
 <p align="center">
