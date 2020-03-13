@@ -1,0 +1,72 @@
+{
+	"name": "@enderverse/ender",
+	"version": "0.3.0",
+	"description": "A modular Discord bot that's extended with plugins.",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"author": {
+		"name": "Tyler Richards",
+		"email": "hello@tjrgg.xyz"
+	},
+	"funding": "https://github.com/enderverse/ender?sponsor=1",
+	"repository": "enderverse/ender",
+	"engines": {
+		"node": ">=12.0.0",
+		"npm": "use-yarn",
+		"yarn": ">=1.22.0"
+	},
+	"main": "src/index.js",
+	"scripts": {
+		"lint": "xo",
+		"lint:fix": "xo --fix",
+		"lint:update": "yarn add -D enderverse/eslint-config-enderverse",
+		"postversion": "git push && git push --tags",
+		"start": "node src/index.js"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"ava": "^2.4.0",
+		"commitlint": "^8.3.5",
+		"commitlint-config-enderverse": "enderverse/commitlint-config-enderverse",
+		"eslint": "^6.3.0",
+		"eslint-config-enderverse": "enderverse/eslint-config-enderverse",
+		"husky": "^4.2.3",
+		"jsdoc": "^3.6.3",
+		"xo": "^0.27.2"
+	},
+	"commitlint": {
+		"extends": [
+			"enderverse"
+		]
+	},
+	"eslintConfig": {
+		"extends": [
+			"enderverse"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"xo": {
+		"extends": [
+			"enderverse"
+		],
+		"overrides": [
+			{
+				"files": [
+					"tests/**/*.js"
+				],
+				"rules": {
+					"func-names": "off",
+					"prefer-arrow-callback": "off"
+				}
+			}
+		],
+		"rules": {
+			"jsdoc/require-example": "off",
+			"jsdoc/require-file-overview": "off"
+		},
+		"space": false
+	}
+}
